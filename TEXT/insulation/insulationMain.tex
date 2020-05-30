@@ -1,0 +1,175 @@
+\chapter{On the insulation of morphogenic signaling}
+\label{insulation:introduction}
+
+
+Morphogenic signals are frequently found in apparent
+gradients within developmental systems and stem cell
+niches, and the set of concentrations of these
+morphogens at a given point in space and time
+is thought to provide the information
+needed for cell fate specification
+(see \ar{pathways:wntTgfb:gut}).
+How cells integrate
+the concentrations of distinct morphogenic signals is an
+unsolved problem. Cells could integrate this information
+during the process of signal transduction to the nucleus (e.g. by
+direct protein-protein interactions between pathways),
+after the transduced signals reach the nucleus (e.g. by
+co-regulation of transcription targets), or at both of
+these levels.
+
+
+Importantly, as discussed in 
+\ar{pathways:discussion}, integration at the level of
+signal transduction (hereafter ``signaling'')
+may lead to a decrease in nuclear
+``knowledge'' of the original signals. Integration at
+the level of transcription, however, can allow cells
+to maintain a more accurate internal model of the
+extracellular environment. Therefore, in order to
+understand how cells make decisions in the context of
+multiple extracellular information sources it is important
+to identify the points at which pathway integration occurs.
+
+
+  \begin{figure}[!bt]
+  \centering
+  \includegraphics[width=3in]{FIGS/insulation/crosstalk.pdf}
+  {\singlespacing 
+  \caption[Types of signaling crosstalk.]
+        { Two signaling pathways ($S_1$ and $S_2$) can
+          crosstalk in multiple ways with respect to a
+          a response $R$. \b{a-b}, In the absence of signaling
+          from one or both pathways there can be no crosstalk.
+          \b{c}, The signals can both affect $R$ in an additive
+          manner, so that the signaling outcomes are independent.
+          Such a case would occur for pathways that use distinct
+          ``pools'' of the same component. \b{d}, If both
+          pathways affect the same pool of $R$, or affect one another,
+          then they will show
+          non-additive, interdependent behaviors.
+          This can arise through several distinct
+          topologies that are difficult to
+          distinguish experimentally.}
+  \label{fig:insulation:crosstalk}}
+  \end{figure}
+  
+
+The Wnt and \tgfbsf\ pathways provide highly-studied
+systems for understanding how cells integrate
+morphogenic signals.
+As discussed in \ar{pathways:introduction}, the 
+Transforming Growth Factor Beta superfamily (\tgfbsf) and
+Wnt/\bcat\ (hereafter simply ``Wnt'') signaling
+pathways are deeply conserved across metazoans,
+are essential to development, and are disrupted
+in many pathologies. These pathways are tightly
+intertwined, frequently being used within the same
+tissue compartments to coordinate cell fate decisions.
+This coordination occurs despite an absence of shared core
+pathway components, which suggests that it is primarily
+mediated by long-term transcriptional interactions.
+However, a number of studies have also identified
+putative nodes of short-term signaling interaction
+(see \ar{pathways:wntTgfb:mechanism} and
+\ar{fig:pathways:xtalk}),
+though the generality and importance of these
+interactions remain unclear.
+
+
+Wnt and TGFB are morphogenic:
+their extracellular ligands lead to concentration-dependent
+increases in downstream transcription factor activity.
+Outside of this general similarity, the mechanisms by
+which these pathways transduce their respective signals
+are quite distinct. As reviewed in
+\ar{pathways:tgfb}, \tgf\ and the related Bone Morphogenic
+Protein (BMP) ligands cause their serine/threonine kinase
+receptors to directly phosphorylate the target Smad
+transcription factors, which subsequently increase in
+nuclear abundance. Activation of the Wnt
+pathway, on the other hand, blocks the otherwise
+constitutive degradation of cytosolic \bcat,
+thus leading to a whole-cell increase in the quantity
+of this transcription factor
+(reviewed in \ar{pathways:wnt}). The transduction of a
+Wnt signal requires many protein components,
+most of which have been implicated in direct
+interactions with Smad proteins (\ar{pathways:wntTgfb:mechanism}).
+Unfortunately, identification of interactions between
+these pathways has so far led to contradictory and
+context-dependent outcomes, suggesting that there is not
+a general mechanism of \tgfbsf\ and Wnt signal integration.
+
+
+However, as I explain in \ar{pathways:discussion},
+it is possible that the methods used to study integration
+of these pathways are simply incapable of identifying general
+mechanisms of crosstalk. The majority of the crosstalk
+studies (and even the studies of each pathway in isolation)
+rely on overexpression or ablation of pathway components,
+which may push cells into abnormal states and thus confound
+interpretation of experimental results.
+In this chapter, then, I take an endogenous and mechanism-independent
+approach to directly test the extent
+of signaling crosstalk between these pathways.
+
+
+Signaling pathways
+can interact in multiple ways during transduction. Without any
+crosstalk, activation of one pathway will
+by definition have no effect on the canonical output of another pathway
+(\ar{fig:insulation:crosstalk}b).
+With \b{non-additive} crosstalk, two pathways
+may affect the same response but do so in an additive
+manner (\ar{fig:insulation:crosstalk}c).
+This would be the case, for example, with pathways that use
+different pools of the same component.
+Finally, pathways can interact
+in more complex, non-additive ways in which the response
+cannot be predicted by knowledge of one pathway alone
+(\ar{fig:insulation:crosstalk}d).
+Which of these crosstalk categories Wnt and \tgfbsf\ fall
+into during signal transduction has not yet been uncovered.
+
+
+I therefore designed an experimental approach that allows me to
+distinguish between the three general classes of 
+interaction described above. By measuring the direct
+output of signaling for each pathway (i.e. transcription
+factor nuclear concentration) as a consequence of
+combinatorial \tgfbsf\ and Wnt ligand inputs, I can infer
+both the class of crosstalk that the interactions fall into and
+the quantitative extent of that crosstalk. Using
+this approach, I show in \ar{insulation:wntTgfb} that Wnt and \tgfbsf,
+in opposition to reports in the literature,
+do not crosstalk at all during signal transduction.
+
+
+Further, in \ar{insulation:bmpTgfb}
+I show that \tgf\ is insulated from BMP signaling despite
+sharing the core component Smad4. Intra-\tgfbsf\ inhibition is
+widely thought to exist and to be due to competition
+for limiting Smad4 (see \ar{pathways:tgfb:crosstalk}).
+I find instead that neither of these claims are correct:
+BMP4 and \tgf 3 do not inhibit one another even when Smad4 is brought
+down to limiting levels.
+
+
+Taken together, my results suggest then that cellular decision-making
+with respect to TGFB and Wnt occurs primarily at
+the level of transcription and not at the level of signaling,
+thus allowing the cell to create a more accurate nuclear
+model of the complex extracellular microenvironment
+than would otherwise be possible.
+
+
+\input{TEXT/insulation/system}
+
+\input{TEXT/insulation/wntTgfb}
+
+\input{TEXT/insulation/bmpTgfb}
+
+\input{TEXT/insulation/discussion}
+
+\input{TEXT/insulation/methods}

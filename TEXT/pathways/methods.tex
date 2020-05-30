@@ -1,0 +1,79 @@
+\section{Methods}
+\label{pathways:methods}
+
+
+    \begin{table}[!bt]
+    \centering
+	\footnotesize
+    \caption[List of crystal structures used in phylogenetic trees.]
+    { Sources of structures used in
+    alignments for \autoref{fig:tgfb:trees} and
+	\autoref{fig:wnt:trees}. }
+    \label{table:pathways:methods:ligandStruct}
+    \begin{tabular}{lllc}
+    \hline
+    Symbol  & Species & PBD ID & Source \\
+    \hline
+    TGFB1 &  \textit{Homo sapiens}   & 3KFD.A  & \cite{Radaev2010}  \\
+    TGFB2 &  \textit{Homo sapiens}   & 2TGI.A  & \cite{Daopin1992}  \\
+    TGFB3 &  \textit{Homo sapiens}   & 2PJY.A  & \cite{Groppe2008}  \\
+    BMP2  &  \textit{Homo sapiens}   & 1REW.A  & \cite{Keller2004}  \\
+	SMAD3 &  \textit{Homo sapiens}   & 1U7F.A  & \cite{Chacko2004}  \\
+	SMAD4 &  \textit{Homo sapiens}   & 1U7F.B  & \cite{Chacko2004}  \\
+	SMAD7 &  \textit{Homo sapiens}   & 3KMP.A  & \cite{BabuRajendran2010}  \\
+	Wnt8  &  \textit{Xenopus laevis} & 4F0A.B  & \cite{Janda2012} \\
+	Fz8   &  \textit{Xenopus laevis} & 4F0A.A  & \cite{Janda2012} \\
+    \hline
+    \end{tabular}
+    \end{table}
+    
+
+\textbf{Sequence alignments.}
+I obtained sequence data from the National Center for Bioinformatics (NCBI)
+servers, choosing each time
+the top listed isoform from the Genes database
+Protein structures are from the
+Research Collaboratory for Structural Bioinformatics (RCSB)
+protein database (PDB) \arp{table:pathways:methods:ligandStruct}.
+I used subsets of these sequences and structures for alignment in
+Promals3D \cite{Pei2008} to obtain phylogenetic trees.
+This multi-sequence alignment algorithm takes advantage of
+structural information for improved alignments, however the
+distances in the phylogenies should be considered approximate since the method
+for calculating genetic distance is more naive than the alignment method.
+The crystal structures were included in the Wnt and Frizzled trees
+because of species differences from the primary sequence data.
+Structures for the \tgfbsf\ and Smad trees were dropped because
+their sequences identically match a subset of the primary sequences.
+The trees were drawn with the R package `ape' \cite{Paradis2004}.
+
+
+For predicting \textit{Trichoplax adhaerens} orthologs of
+genes, I used PSI-BLAST \cite{Altschul1997} with some combination of
+human and \i{Drosophila melanogaster} reference proteins. I ran one or more
+iterations of the algorithm on the seed sequences, and then chose the few top hits
+that were dramatically better matches by both query coverage
+and identity. Each putative \ta\ ortholog is listed in the appropriate table in
+this chapter. These orthologs are in agreement with the literature
+\cite{Srivastava2008}.
+
+
+Specifically, to identify \tgf/BMP
+orthologs I used the \tgf 1-3, BMP2/4, and DPP sequences as seeds,
+resulting in 3 putative orthologs (>50\% coverage). For the TGFB receptors, I used
+the Type I and Type II receptors separately, but each yielded
+a large number (>200) of putative matches that had reasonable identity
+(>30\%) but low coverage (<50\%) or vice versa. I therefore did not
+include these in the phylogenetic tree. For the Smads,
+I used the eight human genes and the \fly\ MAD as seeds, yielding three good hits
+(>90\% coverage, >30\% identity). For the Wnts, I used all 19 human
+genes and fly WG, yielding 2 hits ($\geq$68\% coverage, >30\% identity).
+For the Frizzleds, I used all 10 human
+genes and fly FZ, yielding 2 hits (>50\% coverage, $\geq$30\% identity).
+For \bcat\ I used human CTNNB1 with Junctional Plakoglobin (JUP, also known
+as gamma-catenin) and fly arm,
+yielding 1 hit (>70\% coverage, >70\% identity).
+
+
+
+

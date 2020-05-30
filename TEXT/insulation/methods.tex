@@ -1,0 +1,192 @@
+\section{Methods}
+\label{insulation:methods}
+
+
+The rationale and general methodology for image correction
+and analysis are provided in \ar{imaging:introduction}.
+Specific experimental details are provided in the image captions;
+this section provides information that is
+broadly applicable or more detailed than is appropriate for a figure legend.
+
+
+\textbf{Cell culture.} 
+I maintained all cells in
+RPMI1640 (Cellgro \#10-040) with 5\% FBS
+(Gemini Bio-Products \#100-106) with
+antibiotics/antimycotics under standard tissue
+culture conditions (37$^{\circ}$C, 5\% CO2). In preparation
+for imaging, I plate $\sim 10^4$ cells per well
+of a 96-well plastic plate (Corning \#353219) and a fifth
+of that for 384-well glass plates (Nunc \#164586). I use
+DMEM (Gibco \#11965-126) at the time of seeding when starvation
+conditions are needed. In either case,
+cells are left to adhere overnight before being treated the following day.
+For treatments, I dilute recombinant protein into the same
+media that the cells are grown in. The proteins used for treatment are
+listed in \ar{table:insulation:proteins}.
+Most of the plates used in this chapter are 384-well glass plates.
+Human colonic epithelial cells were a kind gift from
+Dr. Jerry Shay (University of Texas Southwestern, Dallas TX)
+\cite{Roig2010}. The other cell lines were obtained from 
+American Type Culture Collection (Manassas, VA).
+
+   \begin{table}[!bt]
+    \centering
+	\footnotesize
+    \caption[List of recombinant proteins.]
+    { Recombinant proteins used in this chapter. 
+      Vendors: CST, Cell Signaling
+      Technology Inc (Danvers, MA); 
+      Life, Life Technologies (Grand Island, NY);
+      R\&D, R\&D Biosystems (Minneapolis, MN).
+    }
+    \label{table:insulation:proteins}
+    \begin{tabular}{llll}
+    \hline
+    Protein   & Vendor & Catalog \# & Lot \# \\ \hline
+    BMP4        & CST  & 4697    & \\
+    DKK1        & R\&D & 5439-DK & SMR2713041\\
+    Noggin      & R\&D & 6057-NG & \\
+    \tgf 1      & Life & PHG9204 & \\
+    \tgf 3      & CST  & 8425    & \\
+    Wnt3A-LP    & R\&D & 5036-WN & RSK31 \\
+    Wnt3A-HP/CF & R\&D & 5036-WNP/CF & SVH0813081 \\
+    Wnt5A-LP    & R\&D & 645-WN    & \\
+    Wnt5A-LP/CF & R\&D & 645-WN/CF & MCR4513111 \\
+    \hline
+
+    \hline
+    \end{tabular}
+    \end{table}
+
+
+\textbf{Gene expression.}
+I plated cells in 96-well plastic plates as above and left them to
+adhere overnight before treatment the following day.
+Each treatment was performed in triplicate wells.
+I used an Ambion Cells-to-CT
+kit (Life Technologies) to extract mRNA according to manufacturer instructions,
+and passed these samples on to the UT Southwestern
+Medical Center Microarray core facility for
+cDNA library preparation and TaqMan qPCR. The samples were
+given obfuscating identifiers and within-plate positions
+so as to blind the core facility
+to the treatments and replicates.
+TaqMan probes (Applied Biosystems) comprised
+Smad7 (Hs00998193\_m1), Axin2 (Hs00610344\_m1),
+and 18S rRNA (Hs99999901\_s1).
+The core facility returned the raw threshold cycle ($C_t$)
+values for each probe/sample combination, which I first internally
+normalized by 18S rRNA levels to yield
+$C_{t(probe,norm)}=C_{t(probe)}-C_{t(18S)}$ and then 
+converted these values to fold-change over control.
+
+
+\textbf{RNA interference.}
+I used a Dharmacon Smad4 siGENOME SMARTpool
+(GE Life Sciences, \#M-003902-01) to ablate Smad4 in HCEC cells.
+For transfection I used Lipofectamine RNAiMax
+(Life Technologies) according to manufacturer instructions.
+The transfection media was left on cells for 48hrs, after
+which I replaced the media with fresh media for >2hrs prior
+to experimental treatment.
+
+
+\textbf{Western blots.}
+SDS-PAGE and western blotting were performed using standard techniques.
+I plated cells in 6-well dishes and treated them the following day.
+After treatment, I washed the wells with ice-cold PBS
+and then lysed with RIPA buffer (50 mM Tris (pH 8.0), 150 mM NaCl,
+1\% NP40, 0.5\% deoxycholic acid, 0.1\% SDS, 0.5 mM EDTA)
+containing protease and phosphatase inhibitors (Sigma Aldrich).
+Antibodies used are shown in \ar{table:insulation:antibodies},
+generally with 1:1000 dilutions
+(the CST rabbit Smad4 antibody was used
+for blotting).
+
+
+\textbf{Immunostaining}.
+All solutions are made in PBS
+(Gibco \#70013). All wash steps are repeated 3 times with 0.1\%
+Tween20 (Fisher \#BP337). Antibodies are diluted into 2.5\%
+BSA (Fisher \#NC9871802). Cells are fixed in 4\%
+paraformaldehyde (Electron Microscopy Sciences \#15710) for
+10min, permeabilized with 0.2\% Triton X-100 (Sigma \#93443)
+for 10min, then washed. I then incubate the samples overnight
+at 4$^{\circ}$C with appropriate primary antibodies
+\arp{table:insulation:antibodies}.
+After washing, I secondary-stain for 2hrs at
+room temperature with
+added 2.5\textmu{g}/mL Hoechst. 
+Finally, I wash the samples once more before
+storing them in PBST for imaging.
+For all experiments, I prepare
+6-18 uniformly-fluorescing wells for measuring image
+shading, using the same dissolved
+secondary antibodies and Hoechst.
+
+
+    \begin{table}[!bt]
+    \centering
+	\footnotesize
+    \caption[List of antibodies.]
+    { Antibodies used in this dissertation. Vendors: CST, Cell Signaling
+      Technology Inc (Danvers, MA); BD, BD Biosciences (San Jose, CA);
+      Abcam (Cambridge, MA); Life, Life Technologies (Grand Island, NY);
+      R\&D, R\&D Biosystems (Minneapolis, MN).
+      The indicated dilutions are for immunofluorescence unless appended
+      with a `w' for Westerns. The appendix `b' indicates use as a blocking antibody.
+    }
+    \label{table:insulation:antibodies}
+    \begin{tabular}{llllll}
+    \hline
+    Target     & Dilution & Source & Vendor & Catalog \# & Lot \# \\
+    \hline
+    Smad2/3     &  1/1000  & Rabbit &   CST & 8685   & 3         \\
+    pSmad1/5/8  &  1/100   & Rabbit &   CST & 9511   & 8         \\
+    \bcat\      &  1/100   & Mouse  &   BD  & 624084 &           \\
+    Smad4       &  1/100   & Rabbit &   CST & 9515   & 4         \\
+    Smad4       &  1/100   & Mouse  & Abcam & 3219   & GR94411-1 \\
+    Smad1       &  1/100   & Rabbit &   CST & 6944   & 2         \\
+    Smad2       &  1/100   & Rabbit &   CST & 5339   & 4         \\
+    pSmad2/3    &  1/100   & Rabbit &   CST & 8828   &           \\
+    H3B         &  1/1000w & Rabbit &   CST & 9715   &           \\
+    \tgf 1-3    &  1/1000bw& Mouse  &  R\&D & MAB1835   & CCI1512031  \\
+    AlexaFluor 546 Anti-Mouse IgG (H+L) &  1/1000 & Goat &  Life & A11003 & 1256168   \\
+    AlexaFluor 488 Anti-Rabbit IgG (H+L) &  1/1000 & Goat &  Life & A11008 & 1470706   \\
+    \hline
+    \end{tabular}
+    \end{table}
+
+
+\textbf{Imaging.} I imaged all stained plates on a
+Nikon Eclipse Ti-E2000 microscopes controlled by NIS
+Elements version 4, with an Andor Zyla sCMOS 11-bit camera. I wrote custom
+image coordinate-generating software in Python for increased
+stage precision. To obtain the signal from the camera alone, I take
+detector images at low exposure times with no light source.
+
+
+\textbf{Image Correction.}
+The background and shading correction
+followed the pipeline described in \ar{correction:pipeline}
+using custom Matlab software.
+
+
+\textbf{Segmentation and quality control.} For
+all analyses, I wrote a custom Matlab threshold segmentation algorithm 
+to automate detection of nuclei using the
+Hoechst fluorescence channel. 
+I manually set filters for size and shape, by cell type, to remove objects that are
+likely to be artifacts. For each nucleus, I then extract
+its area (in pixels) and the total of all pixel intensities
+for all imaged channels. Finally, I follow the DNA-based
+quality control and single-cell regression-based correction
+described in \ar{imaging:variation} using custom R software.
+The resulting high-quality G1-phase cells are used for analysis.
+
+
+\textbf{Mutual information measurement.} I implemented
+the unbiased mutual information algorithm as described in
+\cite{Cheong2011} and discussed in \ar{imaging:information},
+using a custom Matlab script. 

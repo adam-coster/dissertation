@@ -1,0 +1,35 @@
+# [TGFB1]     = 1ng/mL,,,,,,,,,,,,,,
+# [Wnt3As]    = 200ng/mL,,,,,,,,,,,,,,
+# [Wnt5As]    = 100ng/mL,,,,,,,,,,,,,,
+# [anti-TGFB] = 5ug/mL,,,,,,,,,,,,,,
+# [BSA]       = 0.1% (same as used to reconstitute),,,,,,,,,,,,,,
+# This platemap is a subset of the original,,,,,,,,,,,,,,
+# platemap for experiment TE20. It includes only those wells pertinent to the figure.,,,,,,,,,,,,,,
+well,binning,celltype,channel.1,channel.2,magnification,marker.1,marker.2,media.overnight,media.starvation,microscope,rep,time.starvation,time.treatment,treatment
+B3,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,TGFB1
+B4,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,Wnt3A.CFHP
+B5,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,Wnt5A.CF
+B6,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,Wnt3A
+C3,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,TGFB1
+C4,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,Wnt3A.CFHP
+C5,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,Wnt5A.CF
+C6,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,Wnt3A
+D3,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,TGFB1
+D4,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,Wnt3A.CFHP
+D5,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,Wnt5A.CF
+D6,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,Wnt3A
+E2,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,Wnt5A.M
+E3,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,Wnt5A
+E4,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,ctrl
+E5,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,TGFB1+aTGFB
+E6,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,1,180,60,Wnt3A+aTGFB
+F2,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,Wnt5A.M
+F3,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,Wnt5A
+F4,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,ctrl
+F5,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,TGFB1+aTGFB
+F6,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,2,180,60,Wnt3A+aTGFB
+G2,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,Wnt5A.M
+G3,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,Wnt5A
+G4,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,ctrl
+G5,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,TGFB1+aTGFB
+G6,2x2,HCEC,DAPI,FITC,10X,Hoechst,Smad23,RPMI+5%FBS,DMEM,nikon2,3,180,60,Wnt3A+aTGFB

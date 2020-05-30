@@ -1,0 +1,18 @@
+PRIMARY ANTIBODIES
+Smad2/3:    CST #8685 Lot 3
+pSmad1/5/8: CST #9511 Lot 8
+NFkB:       BD  #610869 Lot 66606
+CTNNB1:     BD  #624084
+
+SECONDARY STAINING
+546 anti-mouse:   1:1000  Life #A11003 Lot 1256168
+488 anti-rabbit:  1:1000  Life #A11008 Lot 1470706
+Hoechst:          1:2000  
+
+OTHER PRIMARY
+pNFkB:  1:100    CST #3033 Lot 2
+CTNNB1: 1:100    CST #8480 Lot 4
+Smad4:  1:100    CST #9515 Lot 4
+Smad4:  1:100  Abcam #3219 Lot GR94411-1
+Smad1:  1:100    CST #6944 Lot 2
+Smad2:  1:100    CST #5339 Lot 4

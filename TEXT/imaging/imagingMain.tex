@@ -1,0 +1,107 @@
+\chapter{On quantitative imaging of single cells}
+\label{imaging:introduction}
+
+\section{Introduction}
+
+Fluorescence microscopy is a
+powerful tool for measuring single-cell properties, especially when sub-cellular
+spatial resolution is required. With modern computing
+power and robotics, we can now use this technology to amass large
+quantities of image data and so study
+cell biology with increasing breadth and depth. 
+Accurate high-throughput imaging and image analysis of single-cell data across
+large numbers of conditions is becoming routine in
+some labs and will continue to become even more commonplace
+as the technology simultaneously improves and becomes cheaper.
+The availability of the technology has led, in recent years, to a boom
+in large-scale microscopy studies of single-cell phenotypes
+\cite{Neumann2006,Young2008,Feng2009,Houle2010,Held2010,Singh2010,Futamura2012}.
+However, our ability to generate
+microscopy data is outpacing our collective ability to
+analyze and interpret it.
+
+
+Fluorescence microscopy has been an experimental staple of biology for many years,
+though it is still infrequently used for rigorous quantitative analysis. More often,
+researchers use fluorescence imaging to demonstrate a particular phenotype
+(as I do in \ar{fig:insulation:schematic}),
+or to manually count the instances of a visually obvious
+phenotype. Our own visual perception is notoriously prone to error, however,
+as our brains can choose to perceive patterns that do not exist, thus
+allowing for latent biases to affect how we manually tally the data.
+As biologists we are often painfully aware of this problem,
+and so there seems to be a general unease when it comes
+to evaluating imaging data. We all know the joke that,
+in published figures, ``representative image'' is a euphemism for
+``the best image I could find.''
+
+
+The distrust is understandable, as proper evaluation
+of imaging data is a non-trivial task, and researchers
+rarely publish enough details to even allow
+for thorough evaluation in the first place. This problem is 
+made worse by a lack of imaging and analysis standards, and by the
+difficulty inherent to making large image-datasets publicly available.
+
+
+Biological image
+quantification is a difficult and generally unsolved problem \cite{Danuser2011},
+and its various approximate
+solutions tend to require a level of expertise in mathematics
+and computer programming, and at least a cursory
+understanding of microscopy optics. Importantly, it also requires expertise
+in the experimental biology under study. Few, if any, biology training
+programs prepare students for such broad practical knowledge.
+
+
+Cell biologists, like myself,
+are rarely trained in quantitative fields
+and so we tend to rely on our colleagues
+in analytical fields to do the quantitative work for us. Those analysts,
+in turn, typically lean back on the biologists for understanding the
+``what'' and ``why'' of the analysis.
+Unfortunately, the large knowledge and language
+asymmetry between biologists and analysts
+creates steep communication barriers that are hard to break
+down. Therefore, the full benefits to cell biology of careful
+quantitative microscopy may be going untapped.
+
+
+My own work relies almost entirely on imaging (\ar{insulation:introduction})
+and, having spent so much time thiking about and performing image analysis,
+I have come to prefer imaging over other methods not only for its efficiency
+in measuring single-cell properties across large numbers
+of conditions, but also because it provides a literal view into
+the mysterious and beautiful world of the cell. I therefore hope that
+careful single-cell image analysis will someday become as commonplace as Western
+blots.
+
+
+My overarching goal in writing this chapter is to provide
+an image analysis resource that is both accessible
+to classically trained biologists
+and useful for analysts from non-biological fields
+that may be preparing to move into the field. In general, I aim to provide careful
+biological and analytical
+reasoning for a subset of the many choices that must
+be made with respect to
+fluorescence imaging experiments. In specific, I focus
+on dealing with
+experimental and imaging artifacts and noise,
+and how to choose biologically meaningful single-cell
+measurements. The methods and rationale in this chapter
+are used extensively in \ar{insulation:introduction}.
+
+
+
+\input{TEXT/imaging/model}
+
+\input{TEXT/imaging/correction}
+
+\input{TEXT/imaging/features}
+
+\input{TEXT/imaging/variation}
+
+\input{TEXT/imaging/discussion}
+
+\input{TEXT/imaging/methods}

@@ -1,0 +1,193 @@
+\section{Solving the encoding problem}
+\label{introduction:encodingSolution}
+
+I have painted an admittedly bleak picture of the difficulties in studying
+cell signaling. It should be clear from this discussion that experimental
+design in cell signaling is quite difficult, and interpretation of experiments
+must be done with extreme care. But can we remove, or at least reduce,
+some of the difficulties discussed above?
+
+
+\subsubsection{Obtaining meaningful $S$ and $R$}
+
+Perhaps the most problematic of the issues discussed is that
+of not knowing which signals $\vec{S}$ a cell is interested in 
+nor which responses $\vec{R}$ encode those signals. One can begin to address
+this by considering different variations of the inputs (e.g. changing
+concentrations or treatment durations) and outputs
+(e.g. phosphorylation states, live-cell measurements of the same
+cell over time, fold-change in concentration, total change in concentration).
+Further discussion of different output measurements, in the particular
+context of single-cell fluorescence microscopy, can
+be found in \ar{imaging:introduction}.
+
+
+Assuming that one could identify a series of potential input signals
+and response metrics, it is not obvious how to go about identifying
+which are the more accurate estimates of $\vec{S}$ and $\vec{R}$.
+An interesting
+approach would be to perform measurements of information content
+between putative combinations of $S$ and $R$, for example using the
+mutual information metric \cite{Cheong2011}.
+Under the assumption
+that the cell is encoding signals in the most informative way
+possible, the $R$ and $S$ choices that maximizes mutual information can then
+be considered to be the best approximation
+of the encoding that the cell uses. This would require either high
+accuracy in measurement or precise knowledge of measurement error. 
+In \ar{insulation:introduction} I test multiple reagents and readouts
+to ensure that they have similar information content, and I discuss
+this approach in more detail in
+\ar{imaging:introduction}.
+
+
+In an example of this approach, research groups measured the
+information content of transcription factor gradients across
+\fly\ embryos, with the question of whether enough information
+was present to specify the location of all nuclei along the embryo.
+While each transcription factor had low positional information content when taken alone,
+in combination the factors did have enough information to specify each nucleus
+position with high accuracy \cite{Gregor2007,Dubuis2011,Dubuis2013}.
+
+
+As with the example of human speech above, 
+it is important to remember that low information content of a
+single $S$ does not
+necessarily mean that it is an \i{incorrect}
+encoding. It may alternatively signify an \i{incomplete} encoding,
+and that that other unmeasured signal properties need to also be considered.
+Importantly, incomplete encodings can be good enough for many
+experimental biology questions.
+
+
+
+\subsubsection{Compensating for cellular variability}
+
+
+To address issues stemming from cellular variability, the
+straightforward solution is to directly measure its effects on the
+experimental relationship between the chosen $S$ and $R$. Measurements
+of $R$ can be performed on a single-cell basis, for example by
+microscopy (as in this dissertation) or by flow sorting.
+The distributions of single-cell values can then be checked for properties,
+such as multi-modality, that would suggest the presence of multiple
+cellular states. (In my work (\ar{insulation:introduction}),
+I verified that each measurement generated unimodal single-cell distributions.)
+
+
+In the case that different cellular states do exists, each cell
+can be grouped into statistically distinct subpopulations by measured
+phenotype \cite{Loo2010,Singh2010}. Each subpopulation can then be
+tested separately to see if each has the same $f(S)=R$ relationship.
+For example, in \ar{insulation:introduction} I test how cell cycle phase
+affects measurements of inter-pathway crosstalk. Further, if live-cell markers
+are able differentiate subpopulations, then cells can be physically
+sorted and experimented on separately.
+
+
+Importantly, the absence of subpopulations
+along the dimension of the measured response $R$ does not imply that
+all cells are the same. Rather, it implies that we cannot claim that they
+are different. Conversely, the presence of subpopulations in one
+dimension does not imply existence of the same subpopulations with respect
+to other dimensions (see \ar{fig:introduction:subpops}). In other
+words, the presence or absence of cellular subpopulations as measured
+by one readout is insufficient evidence to make a claim about whether $R$
+is being distorted by the presence of subpopulations. Such a connection
+must be explicitly tested.
+
+
+  \begin{figure}[!bt]
+  \centering
+  \includegraphics[width=2.5in]{FIGS/introduction/subpops.pdf}
+  {\singlespacing 
+  \caption[Cellular subpopulations are phenotype-dependent]
+          { The presence of subpopulations in one measurement dimension
+            does not imply subpopulations in another dimension;
+            subpopulations are a phenotype-dependent property.
+            (\b{a}) Cells show bi-modality in their total DNA content
+            (as measured by total Hoechst fluorescence), but 
+            (\b{b}) not in the coefficient of variation in DNA content.
+            These measurements are addressed fully in \ar{imaging:introduction}.}
+  \label{fig:introduction:subpops}}
+  \end{figure}
+
+
+
+\subsubsection{Determining context-dependency}
+
+Finally, how can we deal with the issue of context-dependency?
+First, it is important to verify that the context-dependency truly exists.
+As I discuss in \ar{pathways:introduction} and implied in this chapter,
+context-dependency of biological phenomena is often inferred by
+the fact that different labs produce different results when asking
+the same questions. However, interpretation of cell signaling results
+are incredibly complicated, which may
+simply mean that the labs were not, in fact, asking the same questions.
+Because cells
+may be encoding information differently than we expect, we should
+take care when comparing interpretations of results obtained by different
+experimental methods, as each method will approximate $\vec{S}$ and $\vec{R}$
+differently.
+
+
+However, some (perhaps much) of context-dependency is undoubtedly
+real, and can be absorbed into the simple model of cells as functions.
+While we could allow the function to vary from context to context,
+it is more useful to say that $f$ does not change but that
+subsets of the inputs $\vec{S}$ and outputs $\vec{R}$ can vary.
+
+
+To get around this parameter variation, we can first make sure that
+all controllable conditions are kept the same and that all measurements
+are the same from experiment to experiment. Thus, the experimentally-defined
+subset of values in $\vec{S}$ and $\vec{R}$ do not change. Experiments can
+then be repeated identically across multiple cell types, so that the only
+varying parameters are those inherent to cell type differences.
+Any consistent aspects of the relationship between experimental
+$S$ and $R$ across diverse cell types can then be used to infer the
+general properties of $f$. Indeed, this approach is common in cell biology,
+as it is widely believed that any given cell line may have a myriad of
+idiosyncratic properties.
+
+
+When using such a multiple cell-type approach, one may find a case
+where context-dependency is so dramatic that no
+general properties of $f$ can be uncovered. The first aspect
+of this problem to tackle would be to carefully ask if the cell types
+are truly being treated ``identically.'' As suggested above,
+experiments typically use an absolute set of conditions across cell types
+(e.g. identical ligand or drug concentrations). But it may be the case that two cell
+types simply vary in sensitivity to the conditions, such that one type
+is effectively receiving a half-maximal dose while the other is saturated.
+Because we do not know which property $R$ encodes the treatment condition,
+it is also difficult to know if we are measuring an ``identical'' readout.
+Perhaps some of the apparent context-dependency of signaling is due to
+incorrectly interpreting what it means to treat different cell types
+identically.
+
+
+Instead of relying on constant treatment concentrations
+derived from the literature and applying such conditions generally
+across experiments, another approach would be to measure dose-response and time-response
+curves for all cell types that are under experimentation. Conditions could then be
+calibrated on a cell type-specific basis so that, for example, all cell
+lines receive a half-maximal input concentration.
+
+
+\subsubsection{The encoding problem is unsolved}
+
+Part of the intention of this chapter was to make it clear that
+cellular signaling is an incredibly difficult phenomenon to understand,
+and that experimental designs are making many
+assumptions that are either going unnoticed or are not
+being made explicit. Some of these assumptions, if made explicit, might
+dramatically affect how we interpret our experimental results.
+
+
+There is no general solution to the encoding problem but,
+as I have outlined here, steps can be taken to minimize its effects. Perhaps more
+importantly, an awareness of the assumptions allows for them to be tested
+in some cases or, at minimum, allows for results to be interpreted cautiously
+in the light of those assumptions.
+

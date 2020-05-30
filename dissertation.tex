@@ -1,0 +1,237 @@
+\documentclass[11pt,oneside]{book}
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+\usepackage{amsmath}
+\usepackage[title,titletoc]{appendix}
+\usepackage{multicol}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{cite}
+\usepackage{siunitx}
+\usepackage{textgreek}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\usepackage{wrapfig}
+\usepackage{textcomp}
+\usepackage[T1]{fontenc}
+\usepackage{subfigure}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    pdffitwindow=false,     % window fit to page when opened
+    pdfstartview={FitH},    % fits the width of the page to the window
+    pdftitle={2012 QE Outline},    % title
+    pdfauthor={Adam Coster},     % author
+    pdfsubject={2012 QE Outline},   % subject of the document
+    pdfcreator={Adam Coster},   % creator of the document
+    pdfproducer={Adam Coster}, % producer of the document
+    pdfnewwindow=true,      % links in new window
+    colorlinks=true,       % false: boxed links; true: colored links
+    linkcolor=black,          % color of internal links
+    citecolor=black,        % color of links to bibliography
+    filecolor=green,      % color of file links
+    urlcolor=blue           % color of external links
+}
+\usepackage[all]{hypcap}
+\onehalfspacing
+\usepackage[toc=true,xindy,nonumberlist,nopostdot,acronym]{glossaries}
+\usepackage{glossary-mcols}
+\renewcommand*{\glspostdescription}{} 
+
+\makeglossary
+
+\newcommand{\myTitle}{Quantitative single-cell imaging
+reveals insulation of morphogenic signal transduction}
+
+
+
+\newcommand{\tgfbsf}{TGFB$_\text{sf}$}
+\newcommand{\tgf}{TGF\textbeta}
+\newcommand{\bcat}{\textbeta-catenin}
+\newcommand{\gsk}{GSK3\textbeta}
+\newcommand{\frog}{\textit{Xenopus laevis}}
+\newcommand{\fly}{\textit{Drosophila}}
+\newcommand{\ta}{\textit{Trichoplax adhaerens}}
+\newcommand{\fz}{Frizzled}
+\newcommand{\ubn}{ubiquitination}
+\newcommand{\pn}{phosphorylation}
+\newcommand{\p}{phosphorylate}
+\newcommand{\ue}{microenvironment}
+\newcommand{\C}[1]{#1$^{\circ}$C}
+\newcommand{\micro}[1]{\hbox{\textmu}#1}
+\newcommand{\uL}[1]{#1\hbox{\textmu}L}
+\newcommand{\ug}[1]{#1\hbox{\textmu}g}
+\newcommand{\uM}[1]{#1\hbox{\textmu}M}
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\ar}[1]{\autoref{#1}}
+\newcommand{\arp}[1]{(\autoref{#1})}
+\renewcommand{\i}[1]{\textit{#1}}
+\renewcommand{\b}[1]{\textbf{#1}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\Var}{\mathrm{Var}}
+\newcommand{\Cov}{\mathrm{Cov}}
+
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Section}
+\def\subsubsectionautorefname{Section}
+\def\chapterautorefname{Chapter}
+\def\figureautorefname{Fig.}
+
+
+
+
+
+
+\begin{document}
+
+\setlength{\textfloatsep}{6.0pt plus 2.0pt minus 4.0pt}
+\setlength{\floatsep}    {6.0pt plus 2.0pt minus 2.0pt}
+\setlength{\intextsep}   {6.0pt plus 2.0pt minus 2.0pt}
+\setlength{\abovecaptionskip}{6pt plus 2pt minus 0pt}
+
+\belowdisplayskip=12pt plus 4pt
+\abovedisplayskip=12pt plus 4pt
+
+% DEFAULT SPACING FOR FLOATS
+%\textfloatsep — distance between floats on the top or the bottom and the text;
+%\floatsep     — distance between two floats;
+%\intextsep    — distance between floats inserted inside the page text (using h) and the text proper.
+%\textfloatsep: 20.0pt plus 2.0pt minus 4.0pt;
+%\floatsep: 12.0pt plus 2.0pt minus 2.0pt;
+%\intextsep: 12.0pt plus 2.0pt minus 2.0pt.
+
+
+
+\input{glossary}
+\input{acronym}
+
+
+
+\fancyhead{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\pagestyle{empty}
+
+
+\include{FRONT/title}
+
+\pagestyle{plain}
+\pagenumbering{roman}
+\setcounter{page}{5}
+
+\include{FRONT/abstract}
+
+%%%%%%%% TABLES %%%%%%%
+% TOC
+\tableofcontents
+
+\newpage
+\vspace*{\fill}
+\addcontentsline{toc}{chapter}{Prior Publications}
+\section*{\Huge Prior Publications}
+
+\begin{enumerate}
+\item \textit{Coster}, Thorne, Wu, Altschuler. ``Disentangling signaling from transcriptional crosstalk in morphogenic 
+pathways.'' (\textit{Manucript in preparation}).
+\item Thorne, Wichaidit, \textbf{Coster}, Wu, Altschuler. ``GSK-3 is a gatekeeper for kinase-targeted drug response.'' \textit{Nature Chemical Biology}. (\textit{in press}).
+\item \textbf{Coster}, Wichaidit, Rajaram, Altschuler, Wu. ``A simple image correction method for high-throughput microscopy.'' \textit{Nature Methods}, 11(2014): 602.
+\item Xiong, Brunson, Huh, Huang, \textbf{Coster}, Wendt, Fay, Qin. ``The Role of Surface Chemistry on the Toxicity of Ag Nanoparticles.'' \textit{Small} 9(2013): 2628-38.
+\item Marjanovic, Chalupska, Patenode, \textbf{Coster}, Arnold, Ye, Anesi, Lu, Okun, Tkachenko, Haselkorn, Gornicki. ``Recombinant yeast screen for new inhibitors of human acetyl-CoA carboxylase 2 identifies potential drugs to treat obesity.'' \textit{PNAS} 107(2010): 9093-9088.
+\end{enumerate}
+\vspace*{\fill}
+
+% list of figures/tables/equations/appendices
+%{\listoffigures \let\cleardoublepage\clearpage \listoftables}
+%\newpage
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\listfigurename}
+  \listoffigures
+  \cleardoublepage
+  \addcontentsline{toc}{chapter}{\listtablename}
+  \listoftables
+
+% List of abbreviations goes HERE
+\printglossary[type=acronym,style=mcolindex,title=List of Abbreviations]
+\newpage
+
+% MAINMATTER
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\fancyhf{}
+%\fancyfoot[RO,LE]{\thepage}
+%\fancyhead[LE]{\leftmark}
+%\fancyhead[RO]{\rightmark}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RO]{\thepage}
+%\fancyfoot{} % clear all footer fields
+%\renewcommand{\headrulewidth}{0.4pt}
+
+
+
+
+
+% NOW FOR THE CONTENT
+
+\input{TEXT/introduction/introductionMain}
+
+\input{TEXT/pathways/pathwaysMain}
+
+\input{TEXT/insulation/insulationMain}
+
+\input{TEXT/imaging/imagingMain}
+
+\input{TEXT/conclusion/conclusionMain}
+
+% BACKMATTER
+% Appendices
+
+
+\glsaddall
+
+
+
+\begin{appendices}
+
+\input{TEXT/pseg/pseg}
+
+
+\end{appendices}
+
+
+%\glossarystyle{listhypergroup}
+\footnotesize{
+\printglossary[style=mcolindex,title=Glossary]
+}
+
+
+% Bibliography
+
+	\singlespacing
+	\small{
+	\renewcommand{\chapter}[2]{}
+	\clearpage
+	\begin{multicols}{2}
+	\bibliographystyle{ieeetr}
+	\bibliography{REFS/library}
+	\end{multicols}
+	}
+
+\end{document}
+
+
+
+
+
+%% FIGURE TEMPLATE
+%\begin{figure}[ht!]
+%\centering
+%\includegraphics[width=6in]{FIGS/figure.pdf}
+%{\singlespacing 
+%\caption{ The caption.}
+%\label{fig:figure ref}}
+%\end{figure}

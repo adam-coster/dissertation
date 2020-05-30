@@ -1,0 +1,147 @@
+\chapter{Conclusion}
+\label{conclusion:introduction}
+
+
+The study of cellular signaling is a difficult one, in large
+part because we know so little, \i{a priori}, about what aspects
+of a signal a cell cares about and into what intracellular properties
+it encodes those signals. It may be, however, that the complexity of
+our understanding of signaling is hiding a reality of underlying simplicity
+(\ar{introduction:introduction}). In particular, the static
+network models that we rely on include links derived from
+different timescales (such that activity along one link
+should be considered constant relative to activity along another)
+as well as links that may only be present in a
+subset of true signaling network instances
+(e.g. in certain cell types or experimental conditions).
+
+
+Wnt/\bcat\ and \tgfbsf\ together
+provide a case study for this problem of signaling
+complexity (\ar{pathways:introduction}).
+For each pathway alone there is a lack
+of clarity due to idiosyncratic outcomes between
+labs and experiments. There is even less
+clarity when considering how the two pathways are integrated
+by cells in order for them to make decisions.
+Much of the confusion
+regarding crosstalk between these pathways may stem
+from the reliance of published work on overexpression assays,
+which can push cells into abnormal states. Further,
+the same studies rely on transcription-based
+readouts that are measured long after initial pathway 
+activation, allowing for transcriptional feedback to confound
+the results \arp{pathways:discussion}. 
+
+
+Therefore, I tested Wnt/\bcat\
+and \tgfbsf\ for crosstalk using an assay that relies on
+endogenous levels of proteins (to prevent the signaling networks
+from being pushed into abnormal states), short timecourses
+(to prevent transcriptional feedback from confounding 
+interpretation), and direct readouts of signal transduction
+\arp{insulation:introduction}.
+This study design allowed me to directly test the affect
+of signaling through one pathway on signaling through the other.
+In this way, I discovered that Wnt/\bcat\ and \tgfbsf\ are in fact
+completely insulated from one another during signal transduction.
+Further, I found no evidence for the expected intra-\tgfbsf\ inhibition
+nor the competition for the shared component, Smad4, thought to cause it.
+
+
+Though I observed that signaling insulation is a general
+phenomenon, I did uncover an instance of context-dependent
+transcriptional crosstalk. Importantly, the resulting transcriptional
+feedback led to biasing of signaling
+activity over longer timecourses. In effect, this is a direct
+example of the fact that some network links may exist only under certain
+conditions, and that experimental separation of signaling and transcription is essential
+to understanding the nature of morphogenic pathway integration.
+From these results, I conclude that there exists a surprising simplicity
+of interactions between morphogenic pathways: there is a high degree
+of insulation between Wnt/\bcat\ and \tgfbsf, allowing nuclei to make
+transcriptional decisions based on more-complete models of their environments
+(\ar{insulation:discussion}).
+
+
+For the experimental approach that led to my discoveries,
+I relied heavily on quantitative, single-cell fluorescence
+microscopy (\ar{imaging:introduction}).
+Single-cell imaging is an increasingly available
+and invaluable approach
+to studying cell biology (and cell signaling in particular).
+Unfortunately, single-cell image analysis is a difficult and unsolved problem.
+An oft-neglected issue is that of image correction, prior to
+analysis. Indeed, the most commonly-used methods throughout the literature
+tend to provide incomplete or error-prone image correction.
+I discovered a solution to this problem, in the particular case
+of high-throughput microscopy, which takes advantage of predictable optical
+properties within microtiter plates (\ar{imaging:correction}).
+
+
+\subsubsection{On negative results}
+
+
+When I first found that Wnt3A and \tgf 3 are insulated
+from one another during signaling, I was hugely disappointed. This disappointment
+came, in large part, from having spent a year under the impression
+that there actually was crosstalk. I had performed many experiments
+and narrowed down the point of inter-pathway crosstalk to the receptor
+or ligand level, before I finally discovered contamination of the purified
+recombinant Wnt3A ligand (\ar{fig:insulation:contamination}).
+
+
+The artifactual result itself was not the most disappointing part;
+it was instead the feeling that I now had a ``negative result'' and would
+therefore have to drop the project completely and start over.
+This attitude had been ingrained within me throughout my science
+education: I was taught that scientific discovery is about finding
+new and exciting things. Or, in any event, that my discoveries would need to be
+new and exciting in order to get published and move my career forward.
+
+
+While scrambling to make the best out of the situation, I slowly
+realized that there was not truly a problem. The fact that the crosstalk
+I observed was an artifact was a real result: numerous studies
+show signaling interactions between these pathways, and the contaminated
+reagent is among the most commonly used for studying Wnt/\bcat\
+signaling. As long as I
+could unambiguously demonstrate the absence of crosstalk, then my result
+was not a negative one at all and could potentially reduce some confusion
+in the field. One person's negative result is another person's positive
+result, as it were.
+
+
+In any case, there is value to negative results. In recent years there
+has been increasing hubbub in the news and in opinion pieces regarding
+the state of biomedical research. Of particular concern has been the
+irreproducibility of published results and the toxic effects of
+using ``impact'' as the primary metric for determining the merit
+of both scientific discoveries and of the scientists who make those discoveries
+\cite{Schatz2014,Alberts2014}. Why does the emphasis on impact lead to
+irreproducibility? 
+A needed statistic when evaluating a claim
+is the \i{a priori} likelihood of that claim being true;
+when the literature is biased towards exciting (i.e. unlikely)
+results because scientists do not publish ``negative'' results, 
+we cannot accurately
+estimate the likelihood of truth for new claims. This problem
+is (in)famously addressed in a paper by John Ioannidis
+that should be required reading for all biologists \cite{Ioannidis2005}.
+
+
+\subsubsection{Parting thoughts}
+
+
+The overarching field of cellular signaling is an exciting one;
+understanding how cells communicate and process information
+is absolutely fundamental to our understanding of all of
+cell biology. Importantly, a deep understanding of this
+topic will allow us to more ably manipulate biological systems,
+both in medicine and in bioengineering.
+To develop that deep understanding, however, it is essential
+that we revisit the complex static maps of established cellular signaling
+pathways, and then pay careful attention to how time and context
+reshape these networks. By identifying underlying simplicity
+in cell signaling, we will be better equipped to both understand
+and control cellular information processing and decision-making.

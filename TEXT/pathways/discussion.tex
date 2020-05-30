@@ -1,0 +1,158 @@
+\section{Discussion}
+\label{pathways:discussion}
+
+The preceding chapter provided a glimpse of the complexity and uncertainty
+in the properties of Wnt and \tgfbsf\ signaling and inter-pathway crosstalk.
+Here, I summarize the salient points that lead to the approaches and hypotheses
+of my experimental work in \ar{insulation:introduction}.
+
+
+\subsection{Wnt and \tgfbsf\ use morphogenic encoding systems}
+
+The consensus in the literature is that Wnt and \tgfbsf\ signaling are
+morphogenic, meaning that they encode information about ligand concentrations.
+As I have noted throughout this text, the fact that these pathways
+yield concentration-dependent effects does not imply that this is the only
+information about the signals that cells are using.
+
+
+In
+\ar{imaging:information} I discuss how the information content
+of biological outputs can be quantified using the mutual information metric.
+Published reports indicate that the information content of many biological
+input/output relationships, when measured by imaging,
+is quite low \cite{Cheong2011}. My own
+measurements, using the careful image correction discussed in 
+\ar{imaging:introduction}, yield only slightly higher information content.
+This low mutual information between ligand concentrations and the
+outputs of signaling imply that cells can only effectively determine
+whether a signal is present or not; they cannot determine a precise
+absolute concentration. In effect, these morphogens are not
+morphogenic at the single-cell level!
+This limited information content of the concentration-based encoding system is
+especially interesting in light of the dramatic network
+bottlenecking of both pathways. Together, the implication is that
+cells can neither determine which of many
+different ligands is present in the environment nor the precise concentrations of those
+ligands. How much information about these pathways, then, do single
+cells have access to?
+
+
+On the other hand, we may be neglecting additional information channels
+that cells use to encode more accurate models of their extracellular
+environments. ``Non-canonical'' information channels may provide
+just such content. Or, just like the fly embryo syncytium that
+makes use of multiple noisy
+transcription factor gradients to obtain accurate positional
+information (see \ar{introduction:encoding}) \cite{Gregor2007,Dubuis2011},
+cellularized systems such as the intestinal crypt may integrate Wnt and \tgfbsf\
+concentrations in order to more accurately define fates or positions along
+the crypt axis.
+
+
+\subsection{Signaling crosstalk reduces information content}
+
+
+In the preceding sections and in my primary experimental work in
+\ar{insulation:introduction}, I take care to classify pathway crosstalk
+into distinct types: pre-nuclear signaling crosstalk versus nuclear
+crosstalk at the level of transcription.
+This is for an important reason, which is that
+integrating pathways at the level of signal transduction
+causes a loss of information content available to the nucleus.
+In other words, the nucleus loses
+knowledge about the environment when pathways intersect during signaling.
+
+
+As an example, the cell makes an internal model of environmental \tgfbsf\
+using concentrations of active Smad.
+If \tgfbsf\ were the only thing that could activate Smad, then the cell
+would ``know'' that \tgfbsf\ was present in the environment any time that
+active Smad levels increased. But what if Wnt could also modulate Smad?
+In this case, when the nucleus sees changes to active Smad levels, it cannot
+know whether \tgfbsf, Wnt, or some combination of the two ligands are
+present in the environment. This contrasts to the case where \tgfbsf\
+ligands only modulate Smad, and Wnt only modulates \bcat, so that the
+internal model within the cell models the more complex
+reality of the external environment.
+
+
+\subsection{Informational asymmetry between the cell and its environment}
+
+
+Perhaps cells only need limited information about their environments,
+such that the reduction of information caused by complex inter-pathway
+processing during signal transduction is of no consequence. This would
+be surprising, however, as these very same cells are what create the
+information-rich extracellular milieu in the first place
+(e.g. by secreting signals and otherwise modifying the environments of their
+neighbors). How could information-poor
+intracellular networks create information-rich extracellular environments?
+
+
+One possibility is that each cell type present in a complex environment
+does indeed have limited information about that environment. It could
+then be the case that the environmental complexity is
+simply due to the combination of low-information outputs from many distinct cell types.
+In effect, individual cell types would be insulated from the complexity
+of their environments, and would only have to worry about processing the
+few signals that they are capable of ``understanding.''
+
+
+\subsection{Uncertainty in the nodes of \tgfbsf/Wnt signaling crosstalk}
+
+
+Crosstalk at the level of signaling reduces what a cell can know about
+its environment. It is therefore important to determine whether such crosstalk
+truly exists before speculating on why a cell would need so little
+environmental information, as I so prematurely began to do above.
+
+
+Cellular signaling is extremely difficult to study, for the reasons
+outlined in \ar{introduction:introduction}, and the studies
+cited in the current chapter are illustrative of this fact.
+While it is possible that the results of all of the cited studies are accurate,
+they must be interpreted with care. In particular, all of the cited
+studies that identified nodes of \tgfbsf/Wnt crosstalk relied on
+some combination of overexpression, RNAi knockdown, or pharmacological
+inhibition of pathway components. All of these methods can push the
+global cellular signaling network into states that normal cells
+cannot inhabit. This is especially true for studies involving
+\bcat\ and Axin, as these proteins are scaffolds that are normally present at extremely
+low concentrations.
+
+
+Also, the further apart experimental inputs and outputs
+are in time, the less accurate our inferences can be about the mechanisms
+connecting them. The cited studies rely heavily on co-immunoprecipitation of
+overexpressed pathway components to demonstrate the possibility of
+interactions. They then use transcriptional reporters
+and other long-term readouts to measure the consequences of these interactions.
+However, a relationship between physical interactions
+and downstream consequences can only be demonstrated by specifically blocking
+that interaction. This has not been done for any node of
+putative \tgfbsf/Wnt signaling crosstalk, and for good reason: such an
+experiment is exceedingly difficult to design.
+
+
+In short, current studies on \tgfbsf/Wnt signaling crosstalk do not
+show either that such crosstalk definitively exists, nor that the crosstalk
+has functional consequences if it does exist.
+Indeed, in \ar{insulation:introduction} I show strong evidence under
+endogenous signaling conditions that
+these pathways are insulated from one another during signaling. This
+implies that nuclei maintain more accurate models of their environments by
+integrating \tgfbsf\ and Wnt primarily at the level of transcription.
+
+
+It will be important for future studies to accurately
+determine the information content of the \tgfbsf\ and Wnt signaling pathways,
+and how that information is encoded by the cell. 
+Such studies may reveal that cells encode more about the signal than
+just its concentration.
+In combination with the results of \ar{insulation:introduction},
+that the integration of these
+pathways gives cells more information, we may find that
+cells create more accurate internal models of their extracellular
+environments than is currently believed.
+

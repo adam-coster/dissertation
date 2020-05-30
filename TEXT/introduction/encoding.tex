@@ -1,0 +1,203 @@
+\section{The information encoding problem}
+\label{introduction:encoding}
+
+
+An analogous problem to the one we face when trying to understand
+cell signaling is the following.
+Going back to the example of human speech, how would
+alien scientists with no concept of sound think that we
+communicate? Perhaps they would observe us over long periods of time, 
+and eventually correlate certain patterns
+of mouth movements by one human to some behavioral task
+performed by another. These aliens
+might quite reasonably infer that we encode
+communicated messages into mouth movements that are then decoded visually
+by the recipient.
+
+
+Indeed, that putative encoding is a reasonable
+approximation of the true encoding, largely because mouth movements
+are part of the encoding process that is used by the full sound-based
+encoding. This is, of course, why humans can learn to accurately ``read lips.''
+Some of these alien scientists would eventually notice that we can
+still communicate in the dark, and claim that this discovery shows that
+the original encoding model was incorrect. Importantly, breakdown of the model
+in this context did not mean that it was incorrect, it simply meant that
+some part of the message was being carried through an additional, unobserved channel (sound).
+
+
+We face the same issue when trying to identify $\vec{S}$ and
+$\vec{R}$ for studying cell signaling. Communication via molecules
+is so outside of our experience that we have no choice but to make
+educated guesses as to how it might work in each context.
+There are many approaches for converting biological
+data into models, but how do we know what the relevant data
+are? In the broad sense, the relevant data are whatever the
+cell ``cares about.'' Unfortunately we neither know what
+signals a cell is listening to, nor into what form it encodes
+this information. If we don't know $\vec{S}$, and
+we don't know $\vec{R}$, how can we possibly determine $f$?
+I refer to this generally as the ``encoding problem.''
+
+
+\subsection{Identifying inputs and outputs}
+
+
+The first difficulty we face is the determination of $\vec{S}$. 
+We frequently assume that the property
+of signal that the cell cares about is its
+concentration (as for a ligand or drug) \cite{Becker2010,Cheong2011}.
+From a biochemical perspective this is a sensible guess for what
+is being encoded, since we understand biology as a collection of
+intermolecular interactions that have binding constants, may show
+cooperativity, and that have behaviors that fit onto Hill curves.
+This leads to the further expectation that the
+input concentration is saturable, following some form of a sigmoid
+curve. The assumption that cells sense absolute concentrations need not
+necessarily hold true, however, as various pathways can instead show fold-change
+detection \cite{Goentoro2009,Shoval2010,Lee2014}. Further, responses need
+not follow typical sigmoid curves, as they can sometimes show linear responses 
+over a large range of concentrations \cite{Becker2010}.
+
+
+For $\vec{R}$, we often make a similar assumption that cells encode the
+received signal into intracellular concentrations of some factor.
+Indeed, this concentration-based encoding defines
+morphogenic signaling, which
+is typically thought to convert external ligand concentrations into active transcription
+factor concentrations. But again the concentration property need not be
+the value of $R$ that encodes the sensory input.
+
+
+For example, the Tumor Necrosis Factor/Nuclear Factor
+kappa B (TNF/NF-$\kappa$B) pathway
+does show ligand concentration-dependent increases in its nuclear transcription
+factor accumulation, but in such a noisy way that single cells may not be able
+to accurately sense the absolute ligand concentration \cite{Cheong2011}.
+This implies either that single cells are
+poor signal processors or that, alternatively, the absolute ligand concentration only
+partially encodes the information that the cells are using.
+The latter may be the case,
+as recent work indicates that the information content of TNF
+concentrations is more accurately encoded into the fold-change of transcription
+factor activity \cite{Lee2014}.
+
+
+Another alternative to encoding to or from molecule concentration is the use of
+temporal information, such as integration over time or oscillatory behavior
+\cite{Tay2010,Kang2011}. Therefore, care should be taken with the assumption
+that absolute concentration is of utmost informational value to the cell. This assumption
+is difficult to test, however, as there may be a concentration dependence
+even if this is not the primary encoding that the cell uses,
+as is the case for TNF/NF-$\kappa$B signaling and for the analogy
+of mouth movements in human speech.
+
+
+\subsection{Cellular variability}
+\label{introduction:variability}
+
+For a given approximation of $\vec{S}$ and $\vec{R}$,
+is it fair to assume that this approximation is equally meaningful
+for all cells in the population? Most of our knowledge of signaling stems
+from population-based measurements of cellular responses, for example from
+Western blots, microarrays, and other common cellular lysate-based
+methods. Such methods yield averaged cellular behaviors, therefore
+making the implicit assumption that this average reflects individual
+cell behavior \cite{Snijder2011,Altschuler2010,Huang2009}.
+If this assumption is incorrect, such that our measured values of $R$
+do not reflect any real cellular behaviors,
+then the properties of $f$ that we infer will be incorrect.
+
+
+Indeed, many studies have shown that this assumption of cellular homogeneity
+is unjustified. Dramatic examples include the classic demonstration
+that single \frog\ embryos have switch-like instead of graded
+behavior \cite{Ferrell1998}, the finding that various factors thought to be correlated
+during adipocyte differentiation were only correlated in a small
+subset of cells while being anti-correlated in others \cite{Loo2009}, and the
+discovery that
+population-averaged measurements were hiding the ultra-sensitivity
+of temporally asynchronous bacterial motors \cite{Cluzel2000}.
+
+
+How can single cells display behaviors different from the population average?
+Take the trivial case: a tissue sample may include many different cell types
+that have quite different properties. For example, the intestinal
+epithelium contains highly-secretory goblet cells and highly-absorptive
+enterocytes, but the average behavior of these cells might be neither secretory nor
+absorptive. In a less
+trivial case, single cells within an apparently homogeneous
+cultured cell line can also exhibit cell-to-cell differences,
+even if they are derived from the same clone \cite{Singh2010}.
+Such within-cell type differences could be due to asynchrony in cell cycle position
+\cite{Sigal2006a} or to asynchrony of other phenotypic states
+\cite{Kobayashi2009,Kalmar2009,Tay2010,Loo2009}.
+
+
+Cultured ``homogeneous'' populations can thus show single-cell variation due to an
+asynchrony in temporal movement between stable phenotypic types, but they
+can also vary more stochastically. Randomness in cellular phenotypes
+might stem from asymmetry in inherited properties after stem cell
+division, for example \cite{Spencer2009,Navarro2012,Chang2008,Kalmar2009}. 
+Additionally, because genes are
+typically present in only two copies, and a finite number of molecules
+mediate the process of transcription, it is necessarily a noisy
+process \cite{Elowitz2002,Munsky2012,Sanchez2013} that can also generate
+cellular variability. Note that, without careful temporal studies, variation
+due to asynchrony in stable states cannot be easily differentiated from
+that due to rapid movement between unstable states.
+
+
+Outside of fully distinct cell types, why do cells display such variability?
+There is no clear answer to this question, though there are many potential
+explanations. Perhaps the use of molecules to process information is simply
+so inaccurate that it must generate extensive noise. Maybe cells can work
+around the noise we that see, so that their behaviors are more precise
+than they appear. Or perhaps cells have
+adapted to deal with such noise by either suppressing
+or making use of it. Indeed, in some cases variability
+can be useful to the population \cite{Eldar2010}, as single cells may generate
+subpopulations with useful functions. An example is cellular
+differentiation in mammals, where stem cells need to choose whether to
+differentiate, and to which fate \cite{Chang2008,Kalmar2009,Navarro2012}. In other cases
+subpopulations may have resistance to toxic
+environmental stresses \cite{Veening2008,Slack2008,Singh2010}, though we
+should be cautious with just-so explanations for these kinds of links.
+
+
+\subsection{Context-dependency}
+\label{introduction:encoding:context}
+
+Transcriptional
+networks and chromatin state are highly cell type- and
+environment-dependent. As a consequence, properties that are essential
+to signaling may vary between experimental systems. Examples include
+concentrations of cellular receptors, pathway
+modulators, and effectors. Such
+differences in cellular properties and in the microenvironments
+in which cells live are often collapsed into the term ``cellular context.''
+
+
+Cellular context also includes properties
+of other signaling pathways, which is important because
+canonical pathways may be not be isolated information channels.
+Thus, knowing the likely extent of crosstalk
+is important, though general pathway interconnectedness is
+difficult to measure. Some types of signaling are particularly interconnected,
+such as for the growth factors that modulate
+downstream kinase cascades due to the use of higly overlapping downstream components
+\cite{Janes2006}. On the other hand, other pathways
+may be much less interconnected, as I show in this dissertation
+for several key morphogenic signals \arp{insulation:introduction}.
+
+
+Attempts to quantify pathway interconnectedness are few and are
+necessarily limited by what can be practically measured, along with the issues I
+have already noted in this section.
+Computational work seems to show that signaling through one
+pathway can be broadly modulated by properties of the entire
+cell signaling network \cite{Domedel-Puig2011}, while experimental
+work shows that non-additive inter-pathway crosstalk is a sparse phenomenon
+even for high-order combinations
+of up to five signaling pathways \cite{Natarajan2006,Hsueh2009}.
+
