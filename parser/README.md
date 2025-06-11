@@ -6,7 +6,10 @@ This code is VERY specific to the details of this particular LaTeX project, and 
 
 ## Usage
 
-Run scripts from the repo root (e.g. `node parser/parse.glossary.mjs`). Requires Node.js 20+.
+Run `package.json` scripts from this folder. Requires Node.js 22+ for Typescript support.
 
 ## Glossary Parser
+
+`npm run parse:glossary`
+
 
