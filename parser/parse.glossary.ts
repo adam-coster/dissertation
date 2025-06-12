@@ -1,5 +1,6 @@
 import { ok } from "node:assert";
 import fsp from "node:fs/promises";
+import { parseInline } from "./parse.utility.js";
 import type { GlossaryEntry } from "./types.js";
 
 const glossaryText = await fsp.readFile("../glossary.tex", "utf-8");
@@ -39,14 +40,30 @@ for (const rawEntry of rawEntries) {
     description: [],
   };
 
-  // TODO: Pull out the plural form if it exists
+  // Pull out the plural form if it exists. All are "plural=\textit{...}"
+  const pluralLine = rawDescriptionLines.findIndex((line) =>
+    line.trim().startsWith("plural=")
+  );
+  if (pluralLine !== -1) {
+    const pluralForm = rawDescriptionLines[pluralLine]
+      .replace(/^\s*plural\s*=\s*\\textit\{(.*?)\}\s*$/, "$1")
+      .trim();
+    entry.plural = {
+      type: "italic",
+      children: [{ type: "text", value: pluralForm }],
+    };
+    rawDescriptionLines.splice(pluralLine, 1);
+  }
+
   const rawDescription = rawDescriptionLines
     .map((l) => l.trim())
     .join(" ")
-    .replace(/^description\s*=\s*\{(.*?)\s*\}\s*$/, "$1")
+    .replace(/^description\s*=\s*\{(.*?)\s*\}(\s*,)?\s*$/, "$1")
     .trim();
-  const description: GlossaryEntry["description"] = [rawDescription];
-  entry.description = description;
+  // Split up the description into nodes, since it can contain italics and references
+  entry.description = parseInline(rawDescription);
 
-  console.log(entry);
+  if (entry.plural) {
+    console.log(entry);
+  }
 }
